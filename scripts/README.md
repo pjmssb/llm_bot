@@ -25,9 +25,7 @@ The `llm_bot` project involves creating a multichannel chat software. To assist 
 This PowerShell script sets up the directory structure for the `llm_bot` project.
 
 **How to Run:**  
-From a PowerShell prompt, navigate to the `llm_bot/scripts` directory and execute:
-```powershell
-.\create_folders_tree.ps1
+From a PowerShell prompt, navigate to the `llm_bot/scripts` directory and execute: `.\create_folders_tree.ps1`
 
 ### install_aws_cli.ps1 & install_aws_cli.sh
 **Purpose:**
@@ -35,16 +33,11 @@ These scripts (PowerShell for Windows, Bash for Linux/Mac) check if the AWS CLI 
 
 **How to Run:**
 
-Windows:
-From a PowerShell prompt, navigate to the llm_bot/scripts directory and execute:
-powershell
-Copy code
-.\install_aws_cli.ps1
-Linux/Mac:
-From a terminal, navigate to the llm_bot/scripts directory and execute:
-bash
-Copy code
-./install_aws_cli.sh
+* Windows:
+From a PowerShell prompt, navigate to the llm_bot/scripts directory and execute: `.\install_aws_cli.ps1`
+* Linux/Mac:
+From a terminal, navigate to the llm_bot/scripts directory and execute: `./install_aws_cli.sh`
+
 install_sam_cli.ps1 & install_sam_cli.sh
 **Purpose:**
 These scripts (PowerShell for Windows, Bash for Linux/Mac) are for installing the AWS Serverless Application Model (SAM) CLI.
