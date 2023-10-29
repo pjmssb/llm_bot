@@ -1,93 +1,52 @@
-# LLM_Bot Scripts Documentation
+# LLM Bot Scripts Documentation
 
-This README provides an overview of the scripts available in the `llm_bot/scripts` directory, their purpose, and how to execute them.
+This document provides an overview of various utility scripts included in the `llm_bot/scripts` directory. These scripts are designed to set up and manage the development environment for the LLM Bot project, ensuring that contributors can easily install, configure, and manage necessary dependencies.
 
-## Table of Contents
+## Prerequisites
 
-1. [Introduction](#introduction)
-2. [Scripts Overview](#scripts-overview)
-    - [create_folders_tree.ps1](#create_folders_treeps1)
-    - [install_aws_cli.ps1 & install_aws_cli.sh](#install_aws_clip1--install_aws_clish)
-    - [install_sam_cli.ps1 & install_sam_cli.sh](#install_sam_clip1--install_sam_clish)
-    - [install_upgrade_python.ps1 & install_upgrade_python.sh](#install_upgrade_pythonp1--install_upgrade_pythonsh)
-    - [install_upgrade_dependencies.ps1 & install_upgrade_dependencies.sh](#install_upgrade_dependenciesp1--install_upgrade_dependencyssh)
-3. [Usage](#usage)
+- Ensure you have the appropriate command-line environment:
+    - PowerShell for Windows
+    - Bash for Linux/macOS
+- Administrative or superuser rights may be required for certain tasks.
+- For PowerShell scripts, execution policy might need to be modified to allow script execution (use `Set-ExecutionPolicy` cmdlet for this).
 
-## Introduction
+## Scripts
 
-The `llm_bot` project involves creating a multichannel chat software. To assist in setting up the development environment and maintaining the project, several utility scripts have been provided in the `llm_bot/scripts` directory.
+### install_aws_cli.ps1 / install_aws_cli.sh
 
-## Scripts Overview
+- **Purpose**: Checks if AWS CLI is installed, installs it if absent, or updates to the latest version if it's outdated.
+- **Usage**:
+    - PowerShell: `.\install_aws_cli.ps1`
+    - Bash: `./install_aws_cli.sh`
 
-### create_folders_tree.ps1
+### install_sam_cli.ps1 / install_sam_cli.sh
 
-**Purpose:**  
-This PowerShell script sets up the directory structure for the `llm_bot` project.
+- **Purpose**: Checks if AWS SAM CLI is installed, installs it if absent, or updates to the latest version if it's outdated.
+- **Usage**:
+    - PowerShell: `.\install_sam_cli.ps1`
+    - Bash: `./install_sam_cli.sh`
 
-**How to Run:**  
-From a PowerShell prompt, navigate to the `llm_bot/scripts` directory and execute: `.\create_folders_tree.ps1`
+### install_upgrade_python.ps1 / install_upgrade_python.sh
 
-### install_aws_cli.ps1 & install_aws_cli.sh
-**Purpose:**
-These scripts (PowerShell for Windows, Bash for Linux/Mac) check if the AWS CLI is installed. If not, they will install it.
+- **Purpose**: Ensures Python and pip are installed and upgrades them to the latest available versions.
+- **Usage**:
+    - PowerShell: `.\install_upgrade_python.ps1`
+    - Bash: `./install_upgrade_python.sh`
 
-**How to Run:**
+### install_upgrade_dependencies.ps1 / install_upgrade_dependencies.sh
 
-* Windows:
-From a PowerShell prompt, navigate to the llm_bot/scripts directory and execute: `.\install_aws_cli.ps1`
-* Linux/Mac:
-From a terminal, navigate to the llm_bot/scripts directory and execute: `./install_aws_cli.sh`
+- **Purpose**: Installs and upgrades the Python dependencies listed in the `requirements.txt` file located in the parent directory.
+- **Usage**:
+    - PowerShell: `.\install_upgrade_dependencies.ps1`
+    - Bash: `./install_upgrade_dependencies.sh`
 
-install_sam_cli.ps1 & install_sam_cli.sh
-**Purpose:**
-These scripts (PowerShell for Windows, Bash for Linux/Mac) are for installing the AWS Serverless Application Model (SAM) CLI.
+**Note**: Before running the scripts, navigate to the `llm_bot/scripts` directory in your command-line environment. For PowerShell scripts on Windows, you may need to run your PowerShell session with elevated privileges (Run as Administrator).
 
-**How to Run:**
+## Contributing
 
-Windows:
-From a PowerShell prompt, navigate to the llm_bot/scripts directory and execute:
-powershell
-Copy code
-.\install_sam_cli.ps1
-Linux/Mac:
-From a terminal, navigate to the llm_bot/scripts directory and execute:
-bash
-Copy code
-./install_sam_cli.sh
-install_upgrade_python.ps1 & install_upgrade_python.sh
-**Purpose:**
-These scripts (PowerShell for Windows, Bash for Linux/Mac) handle the installation and upgrading of Python and PIP to their latest versions.
+Ensure that you test any changes by running the scripts in a clean environment before submitting a pull request. Additionally, please update this README if you add new scripts or modify the existing ones' functionality.
 
-**How to Run:**
+For any issues, feature requests, or contributions, please submit a request through the project's issue tracker.
 
-Windows:
-From a PowerShell prompt, navigate to the llm_bot/scripts directory and execute:
-powershell
-Copy code
-.\install_upgrade_python.ps1
-Linux/Mac:
-From a terminal, navigate to the llm_bot/scripts directory and execute:
-bash
-Copy code
-./install_upgrade_python.sh
-install_upgrade_dependencies.ps1 & install_upgrade_dependencies.sh
-**Purpose:**
-These scripts (PowerShell for Windows, Bash for Linux/Mac) install and upgrade the Python dependencies for the project using the requirements.txt file located in the parent directory.
-
-**How to Run:**
-
-Windows:
-From a PowerShell prompt, navigate to the llm_bot/scripts directory and execute:
-powershell
-Copy code
-.\install_upgrade_dependencies.ps1
-Linux/Mac:
-From a terminal, navigate to the llm_bot/scripts directory and execute:
-bash
-Copy code
-./install_upgrade_dependencies.sh
-Usage
-To use any of the scripts:
-
-Navigate to the llm_bot/scripts directory.
-Execute the desired script as per the instructions above.
+---
+Happy coding!
