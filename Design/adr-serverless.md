@@ -2,7 +2,7 @@
 # These are optional elements. Feel free to remove any of them.
 status: accepted
 date: 2023-10-28
-deciders: Pablo Mogollon
+deciders: Pablo-Mogollon
 consulted: -
 informed: -
 ---
